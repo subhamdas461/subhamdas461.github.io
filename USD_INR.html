@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dollar-Rupees Converter</title>
+</head>
+<body>
+    <section id="main">
+     
+            <fieldset>
+                <h2> USD-INR CONVERTER</h2>
+
+                <input type="number" id="amount" placeholder=" Enter the amount.">
+
+
+                <select name="slt" id="select" >
+                    <option value="1" onclick="func(this),press()" >USD -> INR</option>
+                    <option value="2" onclick="func(this),press()" >INR -> USD</option>
+                </select >
+                <input type="radio" name="same" id="usd" >
+                <input type="radio" name="same" id="inr" >
+                <br>
+                <div id="ans" ></div>
+                <br>
+                <abbr title="press to convert"><button onclick="press()" id="btn">Convert</button></abbr>
+            </fieldset>
+            
+    </section>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+        }
+        fieldset h2{
+            font-family: sans-serif ;
+            text-align: center;
+            margin: 10px 0;
+            color: rgb(255, 255, 255);
+        }
+        #usd,#inr{
+            display: none;
+        }
+        body{
+            background-color: rgb(49, 58, 58);
+        }
+        #main{
+            background-color: rgb(153, 50, 204);
+            width: 90%;
+            margin: auto;
+        }
+        fieldset{
+            margin: 2em;
+            border: none;
+        }
+        #ans,#amount,select{
+            height: 2em;
+            width: 80%;
+            margin-top: 5px;
+            background-color: rgb(255, 255, 255);
+            line-height: 2em;
+            border: 1px solid;
+            padding: 0 0.5em;
+            cursor: pointer;
+        }
+        button{
+            border: none;
+            padding: 5px 15px;
+            margin-bottom: 40px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(219, 219, 219);
+        }
+    </style>
+
+
+    <script>
+
+       function func(ths){
+        if(ths.value == 1){
+            document.getElementById("usd").checked = true;
+        }
+        else{
+            document.getElementById("inr").checked = true;
+        }
+       }
+       function press(){
+            let res = document.getElementById("amount").value;
+
+            let Rupees = res*76.51, Dollar = res/76.51;
+
+                if( document.getElementById("usd").checked == true){
+                document.getElementById("ans").innerHTML = "₹ "+ Rupees.toFixed(2);
+                }
+                else{
+                document.getElementById("ans").innerHTML ="$ "+ Dollar.toFixed(2) ;    
+                }
+       }
+
+    </script>
+</body>
+</html>
