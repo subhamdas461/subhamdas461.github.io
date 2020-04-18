@@ -13,7 +13,6 @@
 
                 <input type="number" id="amount" placeholder=" Enter the amount.">
 
-
                 <select name="slt" id="select" >
                     <option value="1" onclick="func(this),press()" >USD -> INR</option>
                     <option value="2" onclick="func(this),press()" >INR -> USD</option>
@@ -24,8 +23,7 @@
                 <div id="ans" ></div>
                 <br>
                 <abbr title="press to convert"><button onclick="press()" id="btn">Convert</button></abbr>
-            </fieldset>
-            
+            </fieldset>        
     </section>
 
     <style>
@@ -76,9 +74,7 @@
         }
     </style>
 
-
     <script>
-
        function func(ths){
         if(ths.value == 1){
             document.getElementById("usd").checked = true;
@@ -99,7 +95,6 @@
                 document.getElementById("ans").innerHTML ="$ "+ Dollar.toFixed(2) ;    
                 }
        }
-
     </script>
 </body>
 </html>
