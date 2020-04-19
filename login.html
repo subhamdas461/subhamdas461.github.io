@@ -6,6 +6,7 @@
     <title>Register</title>
 </head>
 <body>
+ 
     <div id="register">
        
             <form>
@@ -13,8 +14,8 @@
                 <br>
                 <input id="pass" type="password" name="Password" placeholder="Password">
                 <br>
-                <button id="button"  onclick="func()">Login</button>
-                <p>Not Registered? &nbsp;<a href="">Create Account</a></p>
+                <button id="button"  onclick="func()">REGISTER</button>
+               
             </form>
     </div>
 </body>
@@ -92,14 +93,14 @@
             b = document.getElementById("pass").value;
             for(i=0; i < user.length ; i++){
                 if(a == user[i].username && b ==user[i].password){
-                    alert("Successfully logged in !!");
+                    alert("ALready Registered !!");
                     return;
                 }else if(a == "" && b==""){
-                    alert("Enter Username & password ");
+                    alert("Enter Username & password !!");
                     return;
                 }
             }
-            alert("Wrong Username or Password")
+            alert("Successfully Registered !!")
         }
     </script>
 </html>
