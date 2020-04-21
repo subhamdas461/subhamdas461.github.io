@@ -1,0 +1,119 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>World Clock</title>
+ </head>
+ <body onload="time()">
+    <div class="clock">
+        <section id="center"></section>
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"></div>
+        
+    </div>
+    <div id="ampm">
+        <select name="" id="">
+            <option value="1" selected>India(+5:30) IST</option>
+            <option value="2">UK(+5:30)</option>
+        </select>
+    </div>
+</body>
+<style>
+   *{
+       margin: 0;
+       padding: 0;
+   }
+   body{
+       background-color: rgb(75, 75, 77);
+   }
+   #center
+   {
+       width: 2vh;
+       height: 2vh;
+       position: absolute;
+       background: rgb(255, 255, 255);
+       place-items: center;
+       border-radius: 50%;
+       z-index: 2;
+   }
+   .clock{
+       display: grid;
+       place-items: center;
+       position: absolute;
+       top: 20%;
+       left: 50%;
+       transform: translate(-50%);
+       height: 40vh;
+       width: 40vh;
+       border-radius: 50%;
+       transform-origin: bottom;
+       background: url(https://raw.githubusercontent.com/subhamdas461/subhamdas461.github.io/master/World%20Clock/clock.png) no-repeat;
+       background-size: cover;
+       background-position: center;
+       background-color: rgb(50, 48, 53) ;
+       border: 2vh solid rgb(90, 127, 206);
+       box-shadow:  0 0 30px  ,
+                inset 0 0 20px 1.2vh rgba(0, 0, 0, 0.5);
+   }
+   .clock div{
+       position: absolute;
+       width: 2px;
+       height: 25vh;
+       left: 50%;
+       background-color: rgb(253, 235, 228);
+       transform-origin: bottom ;
+       border-radius: 50px;
+   }
+    #one{
+       position: absolute;
+       width: 1.4vh;
+       height:10vh;
+       left: 48.3%;
+       top: 25.5%;
+       background-color: rgb(125, 122, 131);
+       transform: rotateZ(0deg);
+   }
+      #two{
+       position: absolute;
+       width: 1vh;
+       height: 15vh;
+       left: 49%;
+       top: 12.5%;
+       background-color: rgb(247, 74, 74);
+       transform: rotateZ(0deg);
+      
+   }
+      #three{
+       position: absolute;
+       width: 0.5vh;
+       height: 16vh;
+       left: 50%;
+       background-color: rgb(255, 255, 255);
+       transform: translateZ(1px);
+       top: 9.5%;
+       
+   }
+ </style>
+ <script>
+     
+    var hour = document.getElementById("one");
+    var min = document.getElementById("two");
+    var sec = document.getElementById("three");
+    function time(){
+    s = new Date().getSeconds();
+    m = new Date().getMinutes();
+    h = new Date().getHours();
+    sdeg = s*6;
+    mdeg = m*6;
+    hdeg= h*30+(m*0.5);
+    sec.style.transform = "rotateZ("+ sdeg+ "deg)"
+    min.style.transform = "rotateZ("+ mdeg+ "deg)"
+    hour.style.transform = "rotateZ("+ hdeg+ "deg)"
+   
+    var t = setTimeout(time,1000)
+    }
+
+ </script>
+ </html>
