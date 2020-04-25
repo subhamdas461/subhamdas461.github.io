@@ -203,7 +203,7 @@ section{
     margin-bottom: 20px;
 }
 .introText{
-   width: 50vw;
+   width: 50%;
    margin-right: 20px;
    font-size: 15px;
    display: block;
@@ -229,7 +229,7 @@ section{
 }
 .introSecond img{
    height: 100%;
-   width: 80%;
+   width: 50%;
 }
 @media (max-width:768px){
     .tab img{
