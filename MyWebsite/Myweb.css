@@ -5,29 +5,33 @@
     font-family: sans-serif;
 }
 
+body{
+    min-width: 290px ;
+    height: 100%;
+}
 .activeIntro{
     animation: onloadA 1s ease-in-out forwards;
-    animation-delay: 0.5s;
+    animation-delay: 1.5s;
     opacity: 0;
 }
 .content h2{
    animation: onloadA 0.8s ease-in-out forwards;
-   animation-delay: 1.5s;
+   animation-delay: 2.2s;
    opacity: 0;
 }   
 .content p{
     opacity: 0;
     animation: onloadA 0.8s ease-out forwards;
-    animation-delay: 2.3s;
+    animation-delay: 3s;
 }
  .b-one{
     opacity: 0;
     animation: onloadA 0.8s ease-out forwards;
-    animation-delay: 3s;
+    animation-delay: 3.6s;
 }.b-two{
     opacity: 0;
     animation: btnA 0.8s ease-out forwards;
-    animation-delay: 3.5s;
+    animation-delay: 4.3s;
    
 }
 
@@ -57,7 +61,11 @@
     width: 100%;
     height: 80px;
     background-color: rgb(255, 255, 255);
-    border-bottom: 2px solid rgba(102, 95, 95, 0.473);
+    border-bottom: 2px solid rgba(102, 95, 95, 0.719);
+}
+.tab .fa:hover{
+    transition: 0.3s ease;
+    color: rgba(28, 56, 94, 0.493);
 }
 .tab .fa-times{
   display: none;
@@ -231,6 +239,146 @@ section{
    height: 100%;
    width: 50%;
 }
+.s2{
+    text-align: center;
+    padding: 80px 30px;
+}
+.s2 .text{
+    max-width: 700px;
+    padding: 20px 0;
+    margin: auto;
+}
+.s2 .text h2{
+    color: rgb(31, 88, 153);
+    font-size: 33px;
+}
+.s2 .text p{
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 15px 0;
+    line-height: 23px;
+}
+.Features{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 1200px;
+   margin: 0 auto;
+}
+.Features .feat{
+    height: 320px;
+    padding: 20px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.feat:hover {
+    background-color: rgba(221, 216, 216, 0.425);
+    transition: 0.3s;
+    box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.192);
+}
+.feat:hover + a{
+    color: royalblue;
+}
+.feat i{
+   font-size: 45px;
+   color: rgb(112, 55, 138);
+}
+.feat h3{
+    color: rgb(69, 84, 131);
+    font-weight: lighter;
+    padding: 10px 0;
+}
+
+.feat p{
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.5px;
+    font-stretch: extra-expanded;
+}
+.feat h4 {
+    font-size: 14px;
+   
+    font-weight: lighter;
+    margin-top: 25px;
+   
+}
+.feat h4 a{
+    color: rgb(112, 55, 138);
+    text-decoration: none;
+}
+.s3{
+    background-color: #313131;
+}
+.About{
+    max-width: 1200px !important;
+    margin: auto;
+    display: flex;
+    padding: 80px 20px ;
+   
+}
+.aboutone a{
+    color: rgb(47, 144, 209) !important;
+}
+.About div{
+  
+    font-family: monospace !important;
+    flex: 1;
+    padding: 0 20px;
+}
+.About h2{
+    color: #ffffff;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.About p{
+    color: rgb(184, 186, 189);
+    font-size: 15px;
+    line-height: 23px;
+    padding-bottom: 20px;
+}
+.About a{
+    color: rgb(184, 186, 189);
+    font-size: 15px;
+    text-decoration: none;
+    
+}
+.About ul li{
+    margin-bottom: 25px;
+    list-style: none;
+}
+.About a:hover{
+    color: rgb(47, 144, 209);
+}
+.aboutfour i{
+    font-size: 20px;
+    color: rgb(47, 144, 209);
+    margin-right: 9px;
+}
+.aboutfour a{
+    display: flex;
+}
+footer{
+    width: 100%;
+    background-color: rgb(87, 87, 87);
+    text-align: center;
+    color: #ffffff;
+    padding:30px 0;
+}
+footer p{
+    margin-bottom: 20px;
+}
+footer div .fa{
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+footer .fa:hover{
+    color: rgb(47, 144, 209);
+}
+footer a{
+    color: rgb(47, 144, 209);
+    text-decoration: none;
+}
 @media (max-width:768px){
     .tab img{
         float: right;
@@ -337,6 +485,21 @@ section{
     }
     .introSecond img{
         width: 100%;
+    }
+    .Features{
+        display: block;
+       
+    }
+    .Features .feat{
+        max-height: 280px;
+        min-width: 300px;
+    }
+    .About{
+        display: block ;
+       
+    }
+    .About div{
+        margin-bottom: 40px;
     }
     @media (max-width:420px) {
         .content{
