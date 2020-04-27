@@ -53,3 +53,6 @@ function changeLeft(){
 slides[count].classList.add("activeIntro");
 }
 
+window.addEventListener('scroll',function(){
+   console.log(window.scrollBy());
+});
