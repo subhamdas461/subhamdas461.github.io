@@ -3,13 +3,33 @@
     padding: 0;
     box-sizing: border-box;  
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
-
 body{
     min-width: 290px ;
-    height: 100%;
+  
+}
+.gotoTop{
+    opacity: 1 !important;
+    z-index: 100 !important;
+}
+#clickTop{
+    transition: 0.3s;
+    opacity: 0;
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    right: 5%;
+    background-color: rgba(0, 0, 0, 0.555);
+    z-index: 0;
+}
+#clickTop i{
+    font-size: 25px;
+    padding: 8px 16px;
+    color: rgb(95, 191, 255);
 }
 .activeIntro{
+    transition: 0.3s;
     animation: onloadA 1s ease-in-out forwards;
     animation-delay: 1.5s;
     opacity: 0;
@@ -55,7 +75,6 @@ body{
         transform: translateX(0);
     }
 }
-
 .tab{ 
     position: relative;
     width: 100%;
@@ -98,8 +117,8 @@ body{
        text-decoration: none;
     }
     .main{
-        position: relative;
-       
+        position: absolute;
+        top: 80px !important;
     }
 }
 
@@ -285,8 +304,9 @@ section{
 }
 .feat h3{
     color: rgb(69, 84, 131);
-    font-weight: lighter;
+    font-weight: normal;
     padding: 10px 0;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .feat p{
@@ -298,7 +318,7 @@ section{
 .feat h4 {
     font-size: 14px;
    
-    font-weight: lighter;
+    font-weight: normal;
     margin-top: 25px;
    
 }
@@ -310,41 +330,42 @@ section{
     background-color: #313131;
 }
 .About{
-    max-width: 1200px !important;
+    max-width: 85% !important;
     margin: auto;
     display: flex;
-    padding: 80px 20px ;
+    padding: 70px 0px ;
    
 }
 .aboutone a{
     color: rgb(47, 144, 209) !important;
 }
 .About div{
-  
     font-family: monospace !important;
     flex: 1;
     padding: 0 20px;
+    min-width: 160px;
 }
 .About h2{
+    font-size: 25px;
     color: #ffffff;
     font-weight: 300;
     margin-bottom: 30px;
 }
 .About p{
     color: rgb(184, 186, 189);
-    font-size: 15px;
+    font-size: 0.85em;
     line-height: 23px;
     padding-bottom: 20px;
 }
 .About a{
     color: rgb(184, 186, 189);
-    font-size: 15px;
+    font-size: 0.85em;
     text-decoration: none;
     
 }
 .About ul li{
     margin-bottom: 25px;
-    list-style: none;
+    list-style: none !important;
 }
 .About a:hover{
     color: rgb(47, 144, 209);
@@ -359,17 +380,19 @@ section{
 }
 footer{
     width: 100%;
-    background-color: rgb(87, 87, 87);
+    background-color: rgb(70, 69, 69);
     text-align: center;
     color: #ffffff;
     padding:30px 0;
 }
 footer p{
+    font-size: 14px;
+    word-spacing: 3px;
     margin-bottom: 20px;
 }
 footer div .fa{
     font-size: 15px;
-    padding: 10px;
+    margin: auto 12px;
     cursor: pointer;
 }
 footer .fa:hover{
@@ -496,10 +519,10 @@ footer a{
     }
     .About{
         display: block ;
-       
+        margin-left: 10px;
     }
     .About div{
-        margin-bottom: 40px;
+        margin-top: 45px;
     }
     @media (max-width:420px) {
         .content{
