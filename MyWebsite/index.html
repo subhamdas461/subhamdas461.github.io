@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="Myweb.css">
+    <link rel="stylesheet" href="../CSS/Myweb.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Ignitiv</title>
     
 </head>
 <body onload="func()">
+    <div id="clickTop" class="">
+      <a href="#"><i class="fa fa-arrow-up"></i></a>
+    </div>
     <div class="mainloader">  <div class="loader"></div> </div>
-    <div class="tab">
+    <div id="tab" class="tab">
         <i onclick="down()" class="fa fa-bars"></i> 
         <a href="" ><img src="https://www.ignitiv.com/wp-content/uploads/2018/07/logo.jpg" alt="logo" srcset=""></a>
         <i onclick="up()" class="fa fa-times" ></i>
@@ -20,11 +23,11 @@
             <li><a href="">Home</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Career</a></li>
-            <li><a href="">Services</a></li>
+            <li><a href="">services</a></li>
             <li><a href="">Contact Us</a></li>
         </ul>
     </nav>
-    <div class="main">
+    <div class="main" >
         
             <section style="background:rgb(19, 42, 63) ;" class="section s1" >
 
@@ -186,18 +189,19 @@
                 </div>
             </div>
         </section>
+        <footer>
+            <p>Copyright &copy; 2013-2020 <a href="">ignitiv.com</a> | All Rights Reserved</p>
+            <div>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-google-plus"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+        </footer>
       
     </div>
-    <footer>
-        <p>Copyright &copy; 2013-2020 <a href="">ignitiv.com</a> | All Rights Reserved</p>
-        <div>
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-google-plus"></i>
-            <i class="fa fa-linkedin"></i>
-        </div>
-    </footer>
-       
+  
+  
 </body>
-<script src="Myweb.js"></script>
+<script src="/JavaScript/Myweb.js"></script>
 </html>
