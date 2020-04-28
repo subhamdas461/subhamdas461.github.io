@@ -403,10 +403,10 @@ footer a{
     text-decoration: none;
 }
 @media (max-width:768px){
-    .tab img{
+    .tab a,img{
         float: right;
-        width: 100px;
-        margin: 15px 30px 15px 0;
+        width: 120px;
+        margin: 5px 25px 0 0;
     }
    nav ul{
        margin-left: 5%;
