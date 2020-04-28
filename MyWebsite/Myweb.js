@@ -53,6 +53,12 @@ function changeLeft(){
 slides[count].classList.add("activeIntro");
 }
 
-window.addEventListener('scroll',function(){
-   console.log(window.scrollBy());
+const topbtn = document.querySelector("#clickTop");
+window.addEventListener("scroll",function(){
+   if(window.scrollY > 100){
+      topbtn.classList.add("gotoTop");
+   }
+   else {
+    topbtn.classList.remove("gotoTop");
+   }
 });
