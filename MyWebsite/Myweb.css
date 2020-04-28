@@ -17,11 +17,9 @@ body{
     transition: 0.3s;
     opacity: 0;
     position: fixed;
-    z-index: 5;
-    bottom: 0;
+    bottom: 3px;
     right: 5%;
     background-color: rgba(0, 0, 0, 0.555);
-    z-index: 0;
 }
 #clickTop i{
     font-size: 25px;
@@ -219,12 +217,10 @@ section{
     left: 0;
 }
 .introSecond{
-   
     background-color: rgb(236, 233, 236);
-    width: 100%;
     align-items: center;
-    padding: 100px 10% 50px 10%;
-    display: flex;
+    padding: 100px 5% 50px 5%;
+    display: flex ;
    
 }.introText *{
     margin-bottom: 20px;
@@ -499,14 +495,16 @@ footer a{
         background-color: rgb(83, 98, 233);
     }
     .introSecond{
-        display: block;
-      padding: 100px 5%;
+       flex-direction: column;
+       padding: 100px 8%;
+     
     }
     .introText{
         width: 100%;
        
     }
     .introSecond img{
+        margin: auto;
         width: 100%;
     }
     .Features{
@@ -522,7 +520,7 @@ footer a{
         margin-left: 10px;
     }
     .About div{
-        margin-top: 45px;
+        margin-top: 40px;
     }
     @media (max-width:420px) {
         .content{
